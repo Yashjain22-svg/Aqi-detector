@@ -50,7 +50,7 @@
           <strong>{{ user.username }}</strong>
           <span>{{ user.email }}</span>
         </div>
-        <a href="#" onclick="openSavedRoutes()">⭐ Saved Routes</a>
+        <a href="#" onclick="openSavedRoutes()"> Saved Routes</a>
         <a href="/logout">🚪 Sign Out</a>
       </div>
     </div>
@@ -134,9 +134,9 @@
       <!-- ACTIONS -->
       <div class="result-actions">
         {% if user %}
-        <button class="action-btn" onclick="saveCurrentRoute()">⭐ Save Route</button>
+        <button class="action-btn" onclick="saveCurrentRoute()"> Save Route</button>
         {% else %}
-        <a href="/login" class="action-btn">⭐ Sign in to Save</a>
+        <a href="/login" class="action-btn"> Sign in to Save</a>
         {% endif %}
         <button class="action-btn" onclick="downloadReport()">📥 Download PDF Report</button>
         <button class="action-btn" onclick="findHospitals()">🏥 Nearby Hospitals</button>
@@ -185,7 +185,7 @@
 <div class="modal-overlay" id="savedRoutesModal" style="display:none">
   <div class="modal">
     <div class="modal-header">
-      <h3>⭐ Your Saved Routes</h3>
+      <h3> Your Saved Routes</h3>
       <button onclick="closeSavedRoutes()">✕</button>
     </div>
     <div class="modal-body" id="savedRoutesList">
