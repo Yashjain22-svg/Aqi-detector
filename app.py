@@ -14,9 +14,11 @@ import random
 from datetime import datetime, timedelta
 from functools import wraps
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'vayupath_secret_key_2024')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///vayupath.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'vayupath.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
