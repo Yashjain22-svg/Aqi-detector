@@ -17,7 +17,7 @@ from functools import wraps
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'vayupath_secret_key_2024')
+app.secret_key = os.environ.get('SECRET_KEY', 'a_temporary_dev_key')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'vayupath.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
